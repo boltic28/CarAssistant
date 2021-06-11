@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "3363477339",
+    "project_id": "service-assistant-b98c7",
+    "storage_bucket": "service-assistant-b98c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3363477339:android:30081934a055681c01ac7e",
+        "android_client_info": {
+          "package_name": "com.boltic28.carassistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "3363477339-snvaf08aubc0a96ujece45lrrk9v24lu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAC8emg13ic7sAd_a_deeKMi6g3kgnxgoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "3363477339-snvaf08aubc0a96ujece45lrrk9v24lu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

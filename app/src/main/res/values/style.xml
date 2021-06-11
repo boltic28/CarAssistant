@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DarkYellow" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="themeBackgroundColor">@color/colorBackground</item>
+        <item name="themeWarningFrameColor">@color/colorWarning</item>
+        <item name="themeAccentedText">@color/colorAccentText</item>
+        <!--        <item name="themeHeaderTextColor">@color/colorMainTextL</item>-->
+        <!--        <item name="themeSecondTextColor">@color/colorSecondTextL</item>-->
+        <!--        <item name="themeThirdTextColor">@color/colorThirdTextL</item>-->
+        <!--        <item name="themeHintTextColor">@color/colorHintTextL</item>-->
+        <!--        <item name="themeSearchTextColor">@color/colorSearchTextL</item>-->
+
+        <!--        &lt;!&ndash;Sign Fragment&ndash;&gt;-->
+        <!--        <item name="themeSignFieldsBGStartColor">@color/colorSignFieldStartL</item>-->
+        <!--        <item name="themeSignFieldsBGEndColor">@color/colorSignFieldEndL</item>-->
+        <!--        <item name="themeSignFieldsBG">@drawable/bg_sign_fields</item>-->
+
+        <!--        <item name="themeSignButtonsBG">@drawable/bg_white_circle</item>-->
+        <!--        <item name="themeSignHeaderTextColor">@color/colorSignHeaderL</item>-->
+        <!--        <item name="themeSignHintTextColor">@color/colorSignHintL</item>-->
+        <!--        <item name="themeSignFieldsTextColor">@color/colorSignTextL</item>-->
+        <!--        <item name="themeSignButtonInBgColor">@color/colorSignButtonInBgL</item>-->
+        <!--        <item name="themeSignButtonUpBgColor">@color/colorSignButtonUpBgL</item>-->
+        <!--        <item name="themeSignButtonTextColor">@color/colorSignButtonTextL</item>-->
+
+        <!--        &lt;!&ndash;Main fragment&ndash;&gt;-->
+        <!--        <item name="themeMainSearchTextColor">@color/colorMainSearchTextL</item>-->
+        <!--        <item name="themeMainSearchBG">@drawable/bg_sign_fields</item>-->
+        <!--        <item name="themeMainSearchItemsColor">@color/colorMainSearchItemTextL</item>-->
+        <!--        <item name="themeMainFABColor">@color/colorMainFabL</item>-->
+        <!--        <item name="themeMainFABImageColor">@color/colorMainFabImageL</item>-->
+
+        <!--        &lt;!&ndash;Create fragment&ndash;&gt;-->
+        <!--        <item name="themeCreatorButtonCreateColor">@color/colorCreatorCreateBgL</item>-->
+        <!--        <item name="themeCreatorButtonCancelColor">@color/colorCreatorCancelBgL</item>-->
+
+        <!--        &lt;!&ndash;Item Fragment&ndash;&gt;-->
+        <!--        <item name="themeItemFRStartDateColor">@color/colorItemFRStartDateL</item>-->
+        <!--        <item name="themeItemSettingButtonBG">@drawable/bg_white_circle</item>-->
+        <!--        <item name="themeItemSettingButtonBGTint">@color/colorItemFRSettingButtonBgL</item>-->
+        <!--        <item name="themeItemRecyclerBG">@drawable/bg_white_rectangle</item>-->
+        <!--        <item name="themeItemRecyclerBGTint">@color/transparent</item>-->
+        <!--        <item name="themeItemButtonsBG">@drawable/bg_white_circle</item>-->
+        <!--        <item name="themeItemButtonsBGTint">@color/colorItemFRButtonsBgL</item>-->
+        <!--        <item name="themeItemFRProgressOnColor">@color/colorItemProgressOnL</item>-->
+        <!--        <item name="themeItemFRProgressOffColor">@color/colorItemProgressOffL</item>-->
+
+        <!--        &lt;!&ndash;Item Rows&ndash;&gt;-->
+        <!--        <item name="themeItemRowBG">@drawable/bg_white_rectangle</item>-->
+        <!--        <item name="themeItemRowBGTint">@color/colorItemRowBgTintL</item>-->
+        <!--        <item name="themeItemSmallRowBG">@drawable/bg_white_rectangle</item>-->
+        <!--        <item name="themeItemSmallRowBGTint">@color/colorItemSmallRowBgTintL</item>-->
+        <!--        <item name="themeItemRowActionButton">@drawable/bg_white_rectangle</item>-->
+        <!--        <item name="themeItemRowActionButtonTint">@color/colorItemRowActButtonBgTintL</item>-->
+    </style>
+
+    <style name="Wrapped">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Expanded">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="MainBackground">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">?themeBackgroundColor</item>
+    </style>
+
+    <style name="GuideLine" parent="Wrapped">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="Barrier">
+        <item name="android:layout_width">@dimen/sf_barrier_width</item>
+        <item name="android:layout_height">@dimen/sf_barrier_height</item>
+        <item name="android:background">?colorAccent</item>
+    </style>
+
+    <style name="LoadingBar">
+        <item name="android:layout_width">@dimen/sf_loading_bar_width</item>
+        <item name="android:layout_height">@dimen/sf_loading_bar_height</item>
+        <item name="android:layout_marginLeft">@dimen/sf_loading_bar_margin_left_right</item>
+        <item name="android:layout_marginRight">@dimen/sf_loading_bar_margin_left_right</item>
+        <item name="android:layout_marginBottom">@dimen/sf_loading_bar_margin_bottom</item>
+        <item name="android:background">?colorAccent</item>
+    </style>
+
+    <style name="LoadingHeader" parent="Wrapped">
+        <item name="android:layout_marginStart">@dimen/sf_app_name_text_left_margin</item>
+        <item name="android:layout_marginBottom">@dimen/sf_app_version_text_bottom_margin</item>
+        <item name="android:text">@string/app_name</item>
+        <item name="android:textSize">@dimen/sf_app_name_text_size</item>
+        <item name="android:textColor">?colorAccent</item>
+    </style>
+
+    <style name="Header" parent="Wrapped">
+        <item name="android:layout_marginStart">@dimen/mf_header_text_left_margin</item>
+        <item name="android:layout_marginBottom">@dimen/mf_header_text_bottom_margin</item>
+        <item name="android:text">@string/app_name</item>
+        <item name="android:textSize">@dimen/mf_header_text_size</item>
+        <item name="android:textColor">?colorAccent</item>
+    </style>
+
+    <style name="VersionName" parent="Wrapped">
+        <item name="android:layout_marginEnd">@dimen/sf_app_version_text_right_margin</item>
+        <item name="android:layout_marginBottom">@dimen/sf_app_version_text_bottom_margin</item>
+        <item name="android:text">@string/version_name</item>
+        <item name="android:textSize">@dimen/sf_app_version_text_size</item>
+        <item name="android:textColor">?colorPrimary</item>
+    </style>
+
+    <style name="Author" parent="Wrapped">
+        <item name="android:layout_marginEnd">@dimen/sf_app_version_text_right_margin</item>
+        <item name="android:layout_marginBottom">@dimen/sf_app_version_text_right_margin</item>
+        <item name="android:text">@string/by_author</item>
+        <item name="android:textSize">@dimen/sf_app_version_text_size</item>
+        <item name="android:textColor">?colorPrimary</item>
+    </style>
+
+    <style name="FieldsName" parent="Wrapped">
+        <item name="android:layout_marginStart">@dimen/lf_field_name_left_margin</item>
+        <item name="android:layout_marginBottom">@dimen/lf_field_name_bottom_margin</item>
+        <item name="android:layout_marginTop">@dimen/lf_field_name_bottom_margin</item>
+        <item name="android:textSize">@dimen/lf_field_name_text_size</item>
+        <item name="android:textColor">?colorAccent</item>
+    </style>
+
+    <style name="InputField">
+        <item name="android:layout_width">@dimen/lf_input_field_width</item>
+        <item name="android:layout_height">@dimen/lf_input_field_height</item>
+        <item name="android:layout_marginBottom">@dimen/lf_field_name_bottom_margin</item>
+        <item name="android:textSize">@dimen/lf_field_name_text_size</item>
+        <item name="android:paddingStart">@dimen/lf_input_field_padding</item>
+        <item name="android:textColor">?themeBackgroundColor</item>
+        <item name="android:background">@drawable/input_field_bg_default</item>
+    </style>
+
+    <style name="TextButton" parent="Wrapped">
+        <item name="android:layout_marginBottom">@dimen/lf_field_name_bottom_margin</item>
+        <item name="android:layout_marginTop">@dimen/lf_field_name_bottom_margin</item>
+        <item name="android:textSize">@dimen/lf_field_name_text_size</item>
+        <item name="android:textColor">?colorPrimary</item>
+    </style>
+
+    <style name="AccentedText" parent="TextButton">
+        <item name="android:textSize">@dimen/lf_accent_text_size</item>
+        <item name="android:textColor">?themeAccentedText</item>
+    </style>
+
+
+    <style name="FloatingButton" parent="Wrapped">
+        <item name="android:layout_marginBottom">@dimen/lf_field_name_bottom_margin</item>
+        <item name="android:layout_marginEnd">@dimen/lf_field_name_bottom_margin</item>
+    </style>
+
+    <!-- Item rows -->
+    <style name="ItemRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item_row_high</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_margin">@dimen/item_row_margin</item>
+        <item name="android:background">@drawable/state_ok</item>
+        <item name="android:textColor">?colorAccent</item>
+        <item name="android:textSize">@dimen/item_row_header_text_size</item>
+    </style>
+
+    <style name="ItemHeader" parent="Wrapped">
+        <item name="android:layout_marginTop">@dimen/item_row_padding</item>
+        <item name="android:layout_marginStart">@dimen/item_row_padding</item>
+        <item name="android:textColor">?colorAccent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/item_row_header_text_size</item>
+    </style>
+
+    <style name="ItemMainText" parent="Wrapped">
+        <item name="android:layout_marginBottom">@dimen/item_row_padding</item>
+        <item name="android:layout_marginStart">@dimen/item_row_padding</item>
+        <item name="android:textColor">?colorAccent</item>
+        <item name="android:textSize">@dimen/item_row_main_text_size</item>
+    </style>
+
+    <style name="ItemBigBaseText" parent="Wrapped">
+        <item name="android:layout_marginEnd">@dimen/item_row_padding</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:textSize">@dimen/item_row_big_secondary_text_size</item>
+    </style>
+
+    <style name="ItemBaseText" parent="Wrapped">
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:textSize">@dimen/item_row_secondary_text_size</item>
+    </style>
+
+    <style name="ItemBaseBoldText" parent="ItemBaseText">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ItemBigBaseBoldText" parent="ItemBigBaseText">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+    <style name="CarItemAttentionIcon" parent="Wrapped">
+        <item name="android:layout_marginEnd">@dimen/item_row_padding</item>
+        <item name="android:layout_marginBottom">@dimen/item_row_padding</item>
+        <item name="android:textSize">@dimen/item_row_header_text_size</item>
+    </style>
+
+    <style name="ItemMessagesCounterText">
+        <item name="android:layout_width">@dimen/item_row_circle_size</item>
+        <item name="android:layout_height">@dimen/item_row_circle_size</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:background">@drawable/ic_messages_circle</item>
+        <item name="android:textSize">@dimen/item_row_circle_text_size</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+
+</resources>

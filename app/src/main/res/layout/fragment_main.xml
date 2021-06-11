@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/MainBackground">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mf_top_guide_line"
+            style="@style/GuideLine"
+            app:layout_constraintGuide_begin="@dimen/mf_barrier_position" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mf_bottom_guide_line"
+            style="@style/GuideLine"
+            app:layout_constraintGuide_end="@dimen/sf_bottom_barrier_position" />
+
+        <TextView
+            android:id="@+id/mf_header"
+            style="@style/Header"
+            app:layout_constraintBottom_toBottomOf="@id/mf_top_guide_line"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mf_recycler"
+            style="@style/Expanded"
+            app:layout_constraintBottom_toTopOf="@id/mf_bottom_guide_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mf_top_guide_line" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            style="@style/FloatingButton"
+            android:clickable="true"
+            app:layout_constraintBottom_toTopOf="@id/mf_bottom_guide_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:maxImageSize="45dp"
+            app:srcCompat="@drawable/ic_add_45" />
+
+        <include
+            style="@style/Wrapped"
+            layout="@layout/block_barrier"
+            app:layout_constraintBottom_toTopOf="@+id/mf_top_guide_line"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <include
+            style="@style/Wrapped"
+            layout="@layout/block_barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mf_bottom_guide_line" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

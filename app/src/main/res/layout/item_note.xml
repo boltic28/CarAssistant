@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="note"
+            type="com.boltic28.carassistant.data.dto.Note" />
+
+        <variable
+            name="onClick"
+            type="com.boltic28.carassistant.ui.adapters.note.OnNoteItemClicker" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/ItemRow"
+        android:textAppearance="?android:attr/textAppearanceListItem">
+
+        <ImageView
+            android:id="@+id/noteItemImage"
+            android:layout_width="@dimen/note_item_image_size"
+            android:layout_height="@dimen/note_item_image_size"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_attention"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/diagnosticItemCar"
+            style="@style/ItemBigBaseText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/note_item_text_margin"
+            android:text='@{note.description}'
+            app:layout_constraintBottom_toTopOf="@id/diagnosticItemData"
+            app:layout_constraintLeft_toRightOf="@id/noteItemImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="description something" />
+
+        <TextView
+            android:id="@+id/diagnosticItemData"
+            style="@style/ItemMainText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/note_item_text_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/noteItemImage"
+            app:layout_constraintTop_toBottomOf="@id/diagnosticItemCar"
+            tools:text="20/05/2020" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

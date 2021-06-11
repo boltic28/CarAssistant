@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="part"
+            type="com.boltic28.carassistant.data.dto.Part" />
+
+        <variable
+            name="onClick"
+            type="com.boltic28.carassistant.ui.adapters.part.OnPartItemClicker" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/ItemRow"
+        android:onClick="@{(view) -> onClick.openItem(part)}"
+        android:textAppearance="?android:attr/textAppearanceListItem">
+
+        <ImageView
+            android:id="@+id/partItemImage"
+            android:layout_width="@dimen/part_item_img_width"
+            android:layout_height="@dimen/part_item_img_high"
+            android:layout_marginStart="@dimen/item_row_stroke_width"
+            android:scaleType="centerCrop"
+            android:src="@drawable/nophoto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/partItemName"
+            style="@style/ItemHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{part.name}'
+            app:layout_constraintLeft_toRightOf="@+id/partItemImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Oil level" />
+
+        <TextView
+            android:id="@+id/partItemToServiceInfo"
+            style="@style/ItemBaseText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/partItemName"
+            app:layout_constraintTop_toBottomOf="@+id/partItemName"
+            tools:text="to service: 3000 km/234 days" />
+
+        <ImageView
+            android:id="@+id/partItemIconAttention"
+            android:layout_width="@dimen/part_item_icon_size"
+            android:layout_height="@dimen/part_item_icon_size"
+            android:layout_marginEnd="@dimen/part_item_icon_end_margin"
+            android:src="@drawable/ic_attention"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/colorOff" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

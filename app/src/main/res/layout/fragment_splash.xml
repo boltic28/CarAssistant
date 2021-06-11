@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        style="@style/MainBackground">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/sf_top_guide_line"
+            style="@style/GuideLine"
+            app:layout_constraintGuide_begin="@dimen/sf_top_barrier_position" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/sf_bottom_guide_line"
+            style="@style/GuideLine"
+            app:layout_constraintGuide_end="@dimen/sf_bottom_barrier_position" />
+
+        <TextView
+            android:id="@+id/sf_app_name"
+            style="@style/LoadingHeader"
+            app:layout_constraintBottom_toBottomOf="@id/sf_top_guide_line"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/sf_version_name"
+            style="@style/VersionName"
+            app:layout_constraintBottom_toBottomOf="@+id/sf_top_guide_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="v.0.0.1" />
+
+        <include
+            style="@style/Wrapped"
+            layout="@layout/block_barrier"
+            app:layout_constraintBottom_toTopOf="@+id/sf_top_guide_line"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/sf_Loading_picture"
+            style="@style/Wrapped"
+            app:layout_constraintBottom_toBottomOf="@id/sf_bottom_guide_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sf_top_guide_line" />
+
+        <TextView
+            android:id="@+id/sf_loading_data"
+            style="@style/Author"
+            app:layout_constraintBottom_toTopOf="@id/sf_seekbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Loading cars..." />
+
+        <ImageView
+            android:id="@+id/sf_seekbar"
+            style="@style/LoadingBar"
+            app:layout_constraintBottom_toBottomOf="@id/sf_bottom_guide_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <include
+            style="@style/Wrapped"
+            layout="@layout/block_barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sf_bottom_guide_line" />
+
+        <TextView
+            android:id="@+id/sf_author"
+            style="@style/Author"
+            android:text="@string/by_author"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

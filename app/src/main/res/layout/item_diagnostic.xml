@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="4dp"
+    android:textAppearance="?android:attr/textAppearanceListItem">
+
+    <TextView
+        android:id="@+id/diagnosticItemCar"
+        style="@style/ItemBigBaseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/note_item_text_margin"
+        app:layout_constraintBottom_toTopOf="@id/diagnosticItemData"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Ford Kuga (234 fg 89" />
+
+    <TextView
+        android:id="@+id/diagnosticItemData"
+        style="@style/ItemBigBaseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/note_item_text_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/diagnosticItemCar"
+        tools:text=" -> to buy smth \n -> visit shop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

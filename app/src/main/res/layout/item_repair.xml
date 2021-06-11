@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="repair"
+            type="com.boltic28.carassistant.data.dto.Repair" />
+
+        <variable
+            name="onClick"
+            type="com.boltic28.carassistant.ui.adapters.repair.OnRepairItemClicker" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/ItemRow"
+        android:background="@color/transparent"
+        android:textAppearance="?android:attr/textAppearanceListItem">
+
+        <TextView
+            android:id="@+id/repairItemDate"
+            style="@style/ItemBigBaseBoldText"
+            android:layout_marginStart="@dimen/item_row_padding"
+            android:layout_marginTop="@dimen/item_row_padding"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2019-05-22" />
+
+        <TextView
+            android:id="@+id/repairItemType"
+            style="@style/ItemBigBaseBoldText"
+            android:layout_marginBottom="@dimen/item_row_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/repairItemDate"
+            tools:text="change" />
+
+        <TextView
+            android:id="@+id/repairItemMileage"
+            style="@style/ItemMainText"
+            android:layout_marginStart="@dimen/repair_item_text_margin"
+            android:layout_marginTop="@dimen/item_row_padding"
+            app:layout_constraintLeft_toRightOf="@+id/repairItemDate"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="155520 km" />
+
+        <TextView
+            android:id="@+id/repairItemDescription"
+            style="@style/ItemBigBaseText"
+            android:layout_marginBottom="@dimen/item_row_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/repairItemMileage"
+            tools:text="description something" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

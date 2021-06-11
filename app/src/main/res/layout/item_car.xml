@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="android.text.TextUtils"/>
+
+        <variable
+            name="car"
+            type="com.boltic28.carassistant.data.dto.Car" />
+
+        <variable
+            name="onClick"
+            type="com.boltic28.carassistant.ui.adapters.car.OnCarItemClicker" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/ItemRow"
+        android:onClick="@{(view) -> onClick.openCar(car)}"
+        android:textAppearance="?android:attr/textAppearanceListItem">
+
+        <ImageView
+            android:id="@+id/carItemImage"
+            android:layout_width="@dimen/car_item_img_width"
+            android:layout_height="@dimen/car_item_img_high"
+            android:layout_marginStart="@dimen/item_row_stroke_width"
+            android:scaleType="centerCrop"
+            android:src="@drawable/nophoto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/carItemCarName"
+            style="@style/ItemHeader"
+            android:text='@{car.brand + " " + car.model}'
+            app:layout_constraintLeft_toRightOf="@+id/carItemImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Brand Model" />
+
+        <TextView
+            android:id="@+id/carItemNumber"
+            style="@style/ItemMainText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{car.number}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/carItemImage"
+            tools:text="1234 AB-5" />
+
+        <TextView
+            android:id="@+id/carItemMileage"
+            style="@style/ItemBigBaseText"
+            android:onClick="@{(view) -> onClick.refreshMileage(car)}"
+            android:text='@{car.mileage + " km"}'
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="115000 km" />
+
+        <ImageView
+            android:id="@+id/carItemIconAttention"
+            style="@style/CarItemAttentionIcon"
+            android:src="@drawable/ic_attention"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:tint="@color/colorOff" />
+
+        <ImageView
+            android:id="@+id/carItemIconMessages"
+            style="@style/CarItemAttentionIcon"
+            android:src="@drawable/ic_post"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/carItemIconAttention"
+            app:tint="@color/colorOff" />
+
+        <TextView
+            android:id="@+id/carItemIconInfoMsgCount"
+            style="@style/ItemMessagesCounterText"
+            android:text="2"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="@+id/carItemIconMessages"
+            app:layout_constraintEnd_toEndOf="@+id/carItemIconMessages"
+            tools:text="4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

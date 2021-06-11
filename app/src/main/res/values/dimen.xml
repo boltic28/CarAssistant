@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Application -->
+    <dimen name="progress_bar_size">40dp</dimen>
+
+
+    <!-- Splash Fragment-->
+    <dimen name="sf_top_barrier_position">100dp</dimen>
+    <dimen name="sf_bottom_barrier_position">80dp</dimen>
+    <dimen name="sf_app_name_text_size">42sp</dimen>
+    <dimen name="sf_app_name_text_left_margin">24dp</dimen>
+    <dimen name="sf_app_name_text_bottom_margin">12dp</dimen>
+    <dimen name="sf_app_version_text_size">14sp</dimen>
+    <dimen name="sf_app_version_text_right_margin">12dp</dimen>
+    <dimen name="sf_app_version_text_bottom_margin">12dp</dimen>
+    <dimen name="sf_barrier_height">5dp</dimen>
+    <dimen name="sf_barrier_width">330dp</dimen>
+    <dimen name="sf_barrier_top_margin">6dp</dimen>
+    <dimen name="sf_loading_bar_height">20dp</dimen>
+    <dimen name="sf_loading_bar_width">300dp</dimen>
+    <dimen name="sf_loading_bar_margin_left_right">20dp</dimen>
+    <dimen name="sf_loading_bar_margin_bottom">40dp</dimen>
+
+    <!-- Login Fragment-->
+    <dimen name="lf_input_field_border_width">2dp</dimen>
+    <dimen name="lf_input_field_width">270dp</dimen>
+    <dimen name="lf_input_field_height">55dp</dimen>
+    <dimen name="lf_input_field_padding">12dp</dimen>
+    <dimen name="lf_field_name_bottom_margin">8dp</dimen>
+    <dimen name="lf_field_name_left_margin">18dp</dimen>
+    <dimen name="lf_field_name_text_size">16sp</dimen>
+
+    <dimen name="lf_accent_text_size">18sp</dimen>
+
+    <!-- Main Fragment-->
+    <dimen name="mf_barrier_position">60dp</dimen>
+    <dimen name="mf_header_text_size">28sp</dimen>
+    <dimen name="mf_header_text_left_margin">24dp</dimen>
+    <dimen name="mf_header_text_bottom_margin">12dp</dimen>
+
+
+    <!-- Items -->
+
+    <dimen name="item_row_high">64dp</dimen>
+    <dimen name="item_row_stroke_width">1dp</dimen>
+    <dimen name="item_row_padding">6dp</dimen>
+    <dimen name="item_row_margin">4dp</dimen>
+
+    <dimen name="item_row_header_text_size">20sp</dimen>
+    <dimen name="item_row_main_text_size">18sp</dimen>
+    <dimen name="item_row_big_secondary_text_size">18sp</dimen>
+    <dimen name="item_row_secondary_text_size">10sp</dimen>
+
+    <dimen name="item_row_circle_size">10dp</dimen>
+    <dimen name="item_row_circle_radius">5dp</dimen>
+    <dimen name="item_row_circle_text_size">7sp</dimen>
+
+    <!--car item-->
+    <dimen name="car_item_row_high">64dp</dimen>
+    <dimen name="car_item_img_high">60dp</dimen>
+    <dimen name="car_item_img_width">80dp</dimen>
+    <dimen name="car_item_icons_size">24dp</dimen>
+    <dimen name="car_item_icons_margin">4dp</dimen>
+    <!--part item-->
+    <dimen name="part_item_row_high">68dp</dimen>
+    <dimen name="part_item_img_high">60dp</dimen>
+    <dimen name="part_item_img_width">80dp</dimen>
+    <dimen name="part_item_icon_margin">4dp</dimen>
+    <dimen name="part_item_icon_size">30dp</dimen>
+    <dimen name="part_item_icon_end_margin">20dp</dimen>
+    <!--note item-->
+    <dimen name="note_item_row_high">48dp</dimen>
+    <dimen name="note_item_icon_margin">4dp</dimen>
+    <dimen name="note_item_text_margin">16dp</dimen>
+    <dimen name="note_item_image_size">40dp</dimen>
+    <!--repair item-->
+    <dimen name="repair_item_row_high">68dp</dimen>
+    <dimen name="repair_item_icon_margin">4dp</dimen>
+    <dimen name="repair_item_text_margin">16dp</dimen>
+
+</resources>

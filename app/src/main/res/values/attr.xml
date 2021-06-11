@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--App-->
+    <attr name="themeBackgroundColor" format="reference"/>
+    <attr name="themeWarningFrameColor" format="reference"/>
+    <attr name="themeAccentedText" format="reference"/>
+
+</resources>

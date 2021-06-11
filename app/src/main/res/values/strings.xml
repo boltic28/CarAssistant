@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Car Assistant</string>
+    <string name="by_author">by S.Baltrukevich 2020</string>
+    <string name="version_name">v. %s</string>
+    <string name="e_mail">Users e-mail:</string>
+    <string name="input_e_mail_here">Input e-mail here</string>
+    <string name="input_password_here">Input password here</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password |</string>
+    <string name="sign_up">Sign Up |</string>
+    <string name="sign_in">Sign In</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="registration">Registration</string>
+    <string name="back">Back</string>
+
+    <!-- toasts -->
+    <string name="password_is_not_confirmed">Password is not confirmed</string>
+    <string name="password_is_not_filled">Password is not filled</string>
+    <string name="password_is_too_short">Password is too short</string>
+    <string name="password_has_to_contain_digit">Password must contain at least %d digit</string>
+    <string name="email_is_not_filled">email is not filled</string>
+    <string name="email_seems_wrong">Email seems like not email</string>
+    <string name="not_provided_functionality">This function have not provided yet</string>
+    <string name="operation_successful">%s successful</string>
+    <string name="operation_failed">%s filed</string>
+    <string name="wrong_data_check_or_register">wrong data, check password and email or register new account</string>
+</resources>

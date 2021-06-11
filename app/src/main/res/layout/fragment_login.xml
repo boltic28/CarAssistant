@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="clickListener"
+            type="com.boltic28.carassistant.ui.LoginClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/MainBackground">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/lf_buttons_group"
+            style="@style/Expanded"
+            app:constraint_referenced_ids="lf_button_forgot_password,lf_button_sign_up,lf_button_sign_in" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/lf_registration_group"
+            style="@style/Expanded"
+            android:visibility="gone"
+            app:constraint_referenced_ids="lf_button_back_to_sign,lf_button_registration,lf_repeat_password_field,lf_repeat_password_field_name" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/lf_main_group"
+            style="@style/Expanded"
+            app:constraint_referenced_ids="lf_email_field, lf_password_field, lf_password_field_name,lf_email_field_name" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lf_top_guide_line"
+            style="@style/GuideLine"
+            app:layout_constraintGuide_begin="@dimen/sf_top_barrier_position" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lf_bottom_guide_line"
+            style="@style/GuideLine"
+            app:layout_constraintGuide_end="@dimen/sf_bottom_barrier_position" />
+
+        <TextView
+            android:id="@+id/lf_app_name"
+            style="@style/LoadingHeader"
+            app:layout_constraintBottom_toBottomOf="@id/lf_top_guide_line"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <include
+            style="@style/Wrapped"
+            layout="@layout/block_barrier"
+            app:layout_constraintBottom_toTopOf="@+id/lf_top_guide_line"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/lf_email_field_name"
+            style="@style/FieldsName"
+            android:text="@string/e_mail"
+            app:layout_constraintBottom_toTopOf="@id/lf_email_field"
+            app:layout_constraintStart_toStartOf="@id/lf_app_name" />
+
+        <EditText
+            android:id="@+id/lf_email_field"
+            style="@style/InputField"
+            android:hint="@string/input_e_mail_here"
+            app:layout_constraintBottom_toTopOf="@id/lf_bottom_guide_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/lf_top_guide_line"
+            app:layout_constraintVertical_bias="0.3"
+            tools:text="test@gmail.com"
+            android:text="test@gmail.com"/>
+
+        <TextView
+            android:id="@+id/lf_password_field_name"
+            style="@style/FieldsName"
+            android:text="@string/password"
+            app:layout_constraintStart_toStartOf="@id/lf_app_name"
+            app:layout_constraintTop_toBottomOf="@id/lf_email_field" />
+
+        <EditText
+            android:id="@+id/lf_password_field"
+            style="@style/InputField"
+            android:layout_marginTop="@dimen/lf_field_name_bottom_margin"
+            android:hint="@string/input_password_here"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lf_password_field_name"
+            tools:background="@drawable/input_field_bg_wrong"
+            android:text="123456"/>
+
+        <TextView
+            android:id="@+id/lf_repeat_password_field_name"
+            style="@style/FieldsName"
+            android:text="@string/confirm_password"
+            app:layout_constraintStart_toStartOf="@id/lf_app_name"
+            app:layout_constraintTop_toBottomOf="@id/lf_password_field" />
+
+        <EditText
+            android:id="@+id/lf_repeat_password_field"
+            style="@style/InputField"
+            android:layout_marginTop="@dimen/lf_field_name_bottom_margin"
+            android:hint="@string/input_password_here"
+            android:inputType="textPassword"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lf_repeat_password_field_name" />
+
+        <TextView
+            android:id="@+id/lf_button_forgot_password"
+            style="@style/TextButton"
+            android:onClick="@{(view) -> clickListener.onForgotPasswordClick()}"
+            android:text="@string/forgot_password"
+            app:layout_constraintEnd_toStartOf="@+id/lf_button_sign_up"
+            app:layout_constraintStart_toStartOf="@+id/lf_password_field"
+            app:layout_constraintTop_toBottomOf="@id/lf_password_field" />
+
+        <TextView
+            android:id="@+id/lf_button_sign_up"
+            style="@style/TextButton"
+            android:onClick="@{(view) -> clickListener.onSignUpClick()}"
+            android:text="@string/sign_up"
+            app:layout_constraintEnd_toStartOf="@+id/lf_button_sign_in"
+            app:layout_constraintStart_toEndOf="@id/lf_button_forgot_password"
+            app:layout_constraintTop_toBottomOf="@id/lf_password_field" />
+
+        <TextView
+            android:id="@+id/lf_button_sign_in"
+            style="@style/AccentedText"
+            android:onClick="@{(view) -> clickListener.onSignInClick()}"
+            android:text="@string/sign_in"
+            app:layout_constraintEnd_toEndOf="@+id/lf_password_field"
+            app:layout_constraintStart_toEndOf="@id/lf_button_sign_up"
+            app:layout_constraintTop_toBottomOf="@id/lf_password_field" />
+
+        <TextView
+            android:id="@+id/lf_button_registration"
+            style="@style/AccentedText"
+            android:onClick="@{(view) -> clickListener.onRegistrationClick()}"
+            android:text="@string/registration"
+            app:layout_constraintEnd_toEndOf="@+id/lf_repeat_password_field"
+            app:layout_constraintTop_toBottomOf="@id/lf_repeat_password_field" />
+
+        <TextView
+            android:id="@+id/lf_button_back_to_sign"
+            style="@style/TextButton"
+            android:onClick="@{(view) -> clickListener.onBackToSignInClick()}"
+            android:text="@string/back"
+            app:layout_constraintStart_toStartOf="@+id/lf_repeat_password_field"
+            app:layout_constraintTop_toBottomOf="@id/lf_repeat_password_field" />
+
+        <include
+            style="@style/Wrapped"
+            layout="@layout/block_barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lf_bottom_guide_line" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
